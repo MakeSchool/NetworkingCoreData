@@ -16,6 +16,9 @@
 		621BBC3E1BE3D1130050483D /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 621BBC3C1BE3D10E0050483D /* Gloss.framework */; };
 		621BBC3F1BE3D1130050483D /* Gloss.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 621BBC3C1BE3D10E0050483D /* Gloss.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		621BBC431BE3D1860050483D /* NetworkingCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 621BBC411BE3D1860050483D /* NetworkingCoreDataModel.xcdatamodeld */; };
+		621BBC461BE3F6590050483D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBC451BE3F6590050483D /* APIClient.swift */; };
+		621BBC491BE3F6930050483D /* JSONTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBC481BE3F6930050483D /* JSONTrip.swift */; };
+		621BBC4B1BE3F6C00050483D /* JSONWaypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBC4A1BE3F6C00050483D /* JSONWaypoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +46,9 @@
 		621BBC391BE3D04C0050483D /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		621BBC3C1BE3D10E0050483D /* Gloss.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gloss.framework; path = Carthage/Build/iOS/Gloss.framework; sourceTree = SOURCE_ROOT; };
 		621BBC421BE3D1860050483D /* NetworkingCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NetworkingCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		621BBC451BE3F6590050483D /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		621BBC481BE3F6930050483D /* JSONTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTrip.swift; sourceTree = "<group>"; };
+		621BBC4A1BE3F6C00050483D /* JSONWaypoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONWaypoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,9 @@
 		621BBC251BE3CFF50050483D /* NetworkingCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				621BBC4C1BE402D80050483D /* Synchronization */,
+				621BBC471BE3F6870050483D /* Model */,
+				621BBC441BE3F64D0050483D /* Networking */,
 				621BBC3B1BE3D1010050483D /* Frameworks */,
 				621BBC381BE3D0190050483D /* CoreData */,
 				621BBC261BE3CFF50050483D /* AppDelegate.swift */,
@@ -103,6 +112,30 @@
 				621BBC3C1BE3D10E0050483D /* Gloss.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		621BBC441BE3F64D0050483D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				621BBC451BE3F6590050483D /* APIClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		621BBC471BE3F6870050483D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				621BBC481BE3F6930050483D /* JSONTrip.swift */,
+				621BBC4A1BE3F6C00050483D /* JSONWaypoint.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		621BBC4C1BE402D80050483D /* Synchronization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Synchronization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +210,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				621BBC491BE3F6930050483D /* JSONTrip.swift in Sources */,
 				621BBC431BE3D1860050483D /* NetworkingCoreDataModel.xcdatamodeld in Sources */,
+				621BBC4B1BE3F6C00050483D /* JSONWaypoint.swift in Sources */,
 				621BBC3A1BE3D04C0050483D /* CoreDataStack.swift in Sources */,
 				621BBC291BE3CFF50050483D /* ViewController.swift in Sources */,
+				621BBC461BE3F6590050483D /* APIClient.swift in Sources */,
 				621BBC271BE3CFF50050483D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
