@@ -20,22 +20,27 @@ class Synchronizer {
   }
   
   func sync(callback: SynchronizerCallback) {
-    var coreDataTrips: [Trip] = []
+    let coreDataClient = CoreDataClient(managedObjectContext: self.managedObjectContext)
     
     APIClient().fetchTrips { trips in
-      trips?.forEach {
+      let coreDataTripIds = coreDataClient.allTrips().map { $0.serverID! }
+      let newServerTrips = trips?.filter {
+        !coreDataTripIds.contains($0.serverID!)
+      }
+      
+      newServerTrips?.forEach {
         let trip = Trip(context: self.managedObjectContext, jsonTrip: $0)
         
         $0.waypoints?.forEach {
           let waypoint = Waypoint(context: self.managedObjectContext, jsonWaypoint: $0)
           waypoint.trip = trip
         }
-        
-        coreDataTrips.append(trip)
       }
       
       try! self.managedObjectContext.save()
-      callback(coreDataTrips)
+      
+      let trips = coreDataClient.allTrips()
+      callback(trips)
     }
   }
   

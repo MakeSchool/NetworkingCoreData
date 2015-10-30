@@ -26,6 +26,12 @@ class ViewController: UIViewController {
     tableView.reloadData()
   }
 
+  @IBAction func syncButtonTapped(sender: AnyObject) {
+    Synchronizer(managedObjectContext: coreDataStack.managedObjectContext).sync { result in
+      self.trips = result
+      self.tableView.reloadData()
+    }
+  }
 }
 
 extension ViewController: UITableViewDataSource {

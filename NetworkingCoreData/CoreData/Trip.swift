@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 class Trip: NSManagedObject {
 
   convenience init(context: NSManagedObjectContext) {
@@ -24,6 +23,7 @@ class Trip: NSManagedObject {
     self.init(entity: entityDescription, insertIntoManagedObjectContext: context)
       
     name = jsonTrip.tripName
+    serverID = jsonTrip.serverID
   }
 
 }

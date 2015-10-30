@@ -12,9 +12,11 @@ import Gloss
 struct JSONTrip: Decodable {
   let tripName: String?
   let waypoints: [JSONWaypoint]?
+  let serverID: String?
   
   init?(json: JSON) {
     self.tripName = "trip" <~~ json
     self.waypoints = "waypoints" <~~ json
+    self.serverID = "serverID" <~~ json
   }
 }
