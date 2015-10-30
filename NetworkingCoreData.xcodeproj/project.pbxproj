@@ -16,6 +16,15 @@
 		621BBC3E1BE3D1130050483D /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 621BBC3C1BE3D10E0050483D /* Gloss.framework */; };
 		621BBC3F1BE3D1130050483D /* Gloss.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 621BBC3C1BE3D10E0050483D /* Gloss.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		621BBC431BE3D1860050483D /* NetworkingCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 621BBC411BE3D1860050483D /* NetworkingCoreDataModel.xcdatamodeld */; };
+		621BBC571BE415410050483D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBC561BE415410050483D /* APIClient.swift */; };
+		621BBC5A1BE418740050483D /* JSONTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBC591BE418740050483D /* JSONTrip.swift */; };
+		621BBC5C1BE418BA0050483D /* JSONWaypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBC5B1BE418BA0050483D /* JSONWaypoint.swift */; };
+		621BBC611BE420080050483D /* Trip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBC5D1BE420080050483D /* Trip+CoreDataProperties.swift */; };
+		621BBC621BE420080050483D /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBC5E1BE420080050483D /* Trip.swift */; };
+		621BBC631BE420080050483D /* Waypoint+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBC5F1BE420080050483D /* Waypoint+CoreDataProperties.swift */; };
+		621BBC641BE420080050483D /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBC601BE420080050483D /* Waypoint.swift */; };
+		621BBC671BE420C50050483D /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBC661BE420C50050483D /* Synchronizer.swift */; };
+		621BBC691BE424C00050483D /* CoreDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBC681BE424C00050483D /* CoreDataClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +52,15 @@
 		621BBC391BE3D04C0050483D /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		621BBC3C1BE3D10E0050483D /* Gloss.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gloss.framework; path = Carthage/Build/iOS/Gloss.framework; sourceTree = SOURCE_ROOT; };
 		621BBC421BE3D1860050483D /* NetworkingCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NetworkingCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		621BBC561BE415410050483D /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		621BBC591BE418740050483D /* JSONTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTrip.swift; sourceTree = "<group>"; };
+		621BBC5B1BE418BA0050483D /* JSONWaypoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONWaypoint.swift; sourceTree = "<group>"; };
+		621BBC5D1BE420080050483D /* Trip+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		621BBC5E1BE420080050483D /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		621BBC5F1BE420080050483D /* Waypoint+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Waypoint+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		621BBC601BE420080050483D /* Waypoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
+		621BBC661BE420C50050483D /* Synchronizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Synchronizer.swift; sourceTree = "<group>"; };
+		621BBC681BE424C00050483D /* CoreDataClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +94,9 @@
 		621BBC251BE3CFF50050483D /* NetworkingCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				621BBC651BE420B70050483D /* Synchronization */,
+				621BBC581BE418670050483D /* Model */,
+				621BBC551BE415340050483D /* APIClient */,
 				621BBC3B1BE3D1010050483D /* Frameworks */,
 				621BBC381BE3D0190050483D /* CoreData */,
 				621BBC261BE3CFF50050483D /* AppDelegate.swift */,
@@ -93,6 +114,11 @@
 			children = (
 				621BBC391BE3D04C0050483D /* CoreDataStack.swift */,
 				621BBC411BE3D1860050483D /* NetworkingCoreDataModel.xcdatamodeld */,
+				621BBC5D1BE420080050483D /* Trip+CoreDataProperties.swift */,
+				621BBC5E1BE420080050483D /* Trip.swift */,
+				621BBC5F1BE420080050483D /* Waypoint+CoreDataProperties.swift */,
+				621BBC601BE420080050483D /* Waypoint.swift */,
+				621BBC681BE424C00050483D /* CoreDataClient.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -103,6 +129,31 @@
 				621BBC3C1BE3D10E0050483D /* Gloss.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		621BBC551BE415340050483D /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				621BBC561BE415410050483D /* APIClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		621BBC581BE418670050483D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				621BBC591BE418740050483D /* JSONTrip.swift */,
+				621BBC5B1BE418BA0050483D /* JSONWaypoint.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		621BBC651BE420B70050483D /* Synchronization */ = {
+			isa = PBXGroup;
+			children = (
+				621BBC661BE420C50050483D /* Synchronizer.swift */,
+			);
+			path = Synchronization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,10 +228,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				621BBC5A1BE418740050483D /* JSONTrip.swift in Sources */,
 				621BBC431BE3D1860050483D /* NetworkingCoreDataModel.xcdatamodeld in Sources */,
+				621BBC641BE420080050483D /* Waypoint.swift in Sources */,
+				621BBC611BE420080050483D /* Trip+CoreDataProperties.swift in Sources */,
+				621BBC621BE420080050483D /* Trip.swift in Sources */,
+				621BBC5C1BE418BA0050483D /* JSONWaypoint.swift in Sources */,
 				621BBC3A1BE3D04C0050483D /* CoreDataStack.swift in Sources */,
 				621BBC291BE3CFF50050483D /* ViewController.swift in Sources */,
+				621BBC571BE415410050483D /* APIClient.swift in Sources */,
+				621BBC691BE424C00050483D /* CoreDataClient.swift in Sources */,
+				621BBC631BE420080050483D /* Waypoint+CoreDataProperties.swift in Sources */,
 				621BBC271BE3CFF50050483D /* AppDelegate.swift in Sources */,
+				621BBC671BE420C50050483D /* Synchronizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +398,7 @@
 				621BBC371BE3CFF50050483D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

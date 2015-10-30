@@ -16,12 +16,41 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0un-k5-cA9">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TripCell" id="dLc-Vr-PCc">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dLc-Vr-PCc" id="Ilv-tP-hCf">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0un-k5-cA9" secondAttribute="trailing" id="Tlf-kK-juT"/>
+                            <constraint firstItem="0un-k5-cA9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="avZ-tp-wMr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0un-k5-cA9" secondAttribute="bottom" id="hCS-Ym-dGV"/>
+                            <constraint firstItem="0un-k5-cA9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uZs-EJ-WNA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="0un-k5-cA9" id="B2c-kA-0vO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="172" y="278"/>
         </scene>
     </scenes>
 </document>
